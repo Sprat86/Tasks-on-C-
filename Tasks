@@ -1,0 +1,156 @@
+  ЗАДАЧИ НА ЯЗЫКЕ C#.
+  
+  Задачи на циклы:
+  
+  
+  1.
+  Задача:
+  Напишите программу, которая выводит "Hello, World!" (без кавычек) 19 раз, каждый на своей строке
+  
+  Ответ:
+  using System;
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        for (int i = 0; i < 19; i++) {
+        Console.WriteLine("Hello, BeeGeek!");
+        };
+    }
+}
+
+
+2. Четные числа
+Задача:
+Напишите программу, которая выводит все четные числа на заданном отрезке.
+
+Входные данные
+Вводятся целые числа a и b. Гарантируется, что a не превосходит b (a≤b). Каждое из чисел по модулю не превышает 30000 .
+
+Выходные данные
+Выведите все четные числа от a до b включительно, причем каждое число в отдельной строке 
+
+Sample Input:
+7
+11
+Sample Output:
+8
+10
+
+Ответ:
+using System;
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        int a = Convert.ToInt32(Console.ReadLine());
+        int b = Convert.ToInt32(Console.ReadLine());
+        for (int i = a; i <= b; i++) {
+        if (i % 2 == 0) {
+        Console.WriteLine(i);
+        }
+        };
+    }
+}
+
+
+3. Делители числа
+Задача:
+По данному целому числу x, выведите все его делители.
+
+Входные данные 
+Вводится натуральное число x.
+
+Выходные данные 
+Выведите все натуральные делители числа x в порядке возрастания (включая 1 и само число), причем каждый делитель в отдельной строке.
+Sample Input:
+4
+Sample Output:
+1
+2
+4
+
+Ответ:
+using System;
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        int a = Convert.ToInt32(Console.ReadLine());
+        for (int i = 1; i <= a; i++) {
+        if (a % i == 0) {
+        Console.WriteLine(i);
+        };
+        };
+    }
+}
+
+
+4. Обратная последовательность
+Задача:
+Выведите обратную последовательность чисел на отрезке от a до b.
+
+Входные данные
+Вводятся целые числа a и b. Гарантируется, что a не превосходит b (a≤b). Каждое из чисел по модулю не превышает 30000 .
+
+Выходные данные
+Выведите на каждой строке все целые числа от b до a включительно.
+
+Sample Input:
+3
+7
+Sample Output:
+7
+6
+5
+4
+3
+
+Ответ:
+using System;
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        int a = Convert.ToInt32(Console.ReadLine());
+        int b = Convert.ToInt32(Console.ReadLine());
+        for (int i = b; i >= a; i--) {
+        Console.WriteLine(i);
+        };
+    }
+}
+
+5. Квадраты
+Задача:
+По данному числу N найдите все квадраты чисел от 1 до N включительно. 
+
+Входные данные 
+Вводится натуральное число N, не превышающее 104.
+
+Выходные данные 
+Выведите квадраты чисел от 1 до N включительно.
+
+Sample Input:
+3
+Sample Output:
+1
+4
+9
+
+Ответ:
+using System;
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        int a = Convert.ToInt32(Console.ReadLine());
+        for (int i = 1; i <= a; i++) {
+        Console.WriteLine(Math.Pow(i, 2));
+        };
+    }
+}
