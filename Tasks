@@ -4,10 +4,10 @@
   
   
   1.
-  Задача:
+  ЗАДАЧА:
   Напишите программу, которая выводит "Hello, World!" (без кавычек) 19 раз, каждый на своей строке
   
-  Ответ:
+  РЕШЕНИЕ:
   using System;
 public class MainClass
 {
@@ -22,7 +22,7 @@ public class MainClass
 
 
 2. Четные числа
-Задача:
+ЗАДАЧА:
 Напишите программу, которая выводит все четные числа на заданном отрезке.
 
 Входные данные
@@ -38,7 +38,7 @@ Sample Output:
 8
 10
 
-Ответ:
+РЕШЕНИЕ:
 using System;
 public class MainClass
 {
@@ -57,7 +57,7 @@ public class MainClass
 
 
 3. Делители числа
-Задача:
+ЗАДАЧА:
 По данному целому числу x, выведите все его делители.
 
 Входные данные 
@@ -72,7 +72,7 @@ Sample Output:
 2
 4
 
-Ответ:
+РЕШЕНИЕ:
 using System;
 public class MainClass
 {
@@ -90,15 +90,13 @@ public class MainClass
 
 
 4. Обратная последовательность
-Задача:
+ЗАДАЧА:
 Выведите обратную последовательность чисел на отрезке от a до b.
 
 Входные данные
-Вводятся целые числа a и b. Гарантируется, что a не превосходит b (a≤b). Каждое из чисел по модулю не превышает 30000 .
-
+Вводятся целые числа a и b. Гарантируется, что a не превосходит b (a≤b). Каждое из чисел по модулю не превышает 30000.
 Выходные данные
 Выведите на каждой строке все целые числа от b до a включительно.
-
 Sample Input:
 3
 7
@@ -109,7 +107,7 @@ Sample Output:
 4
 3
 
-Ответ:
+РЕШЕНИЕ:
 using System;
 public class MainClass
 {
@@ -125,15 +123,13 @@ public class MainClass
 }
 
 5. Квадраты
-Задача:
+ЗАДАЧА:
 По данному числу N найдите все квадраты чисел от 1 до N включительно. 
 
 Входные данные 
-Вводится натуральное число N, не превышающее 104.
-
+Вводится натуральное число N, не превышающее 10 в степени 4.
 Выходные данные 
 Выведите квадраты чисел от 1 до N включительно.
-
 Sample Input:
 3
 Sample Output:
@@ -141,7 +137,7 @@ Sample Output:
 4
 9
 
-Ответ:
+РЕШЕНИЕ:
 using System;
 public class MainClass
 {
@@ -154,3 +150,321 @@ public class MainClass
         };
     }
 }
+
+
+6. Делители
+ЗАДАЧА:
+Выведите количество натуральных делителей числа x, включая 1 и само число. 
+
+Входные данные 
+Вводится натуральное число x, не превышающее 2⋅10 в степени 5.
+Выходные данные 
+Выведите количество натуральных делителей числа x, включая 1 и само число.
+Sample Input:
+32
+Sample Output:
+6
+
+РЕШЕНИЕ:
+using System;
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        int a = Convert.ToInt32(Console.ReadLine());
+        int count = 0;
+        for (int i = 1; i <= a; i++) {
+        if (a % i == 0) {
+        count++;
+        }
+        };
+        Console.Write(count);
+    }
+}
+
+
+7. Сумма
+ЗАДАЧА:
+Найдите сумму введенных чисел.
+
+Входные данные 
+Вводится натуральное число N(N≤10 в степени 5), а затем N чисел, сумму которых необходимо вычислить.
+Все числа по модулю не превышают 2⋅10 в степени 4.
+Выходные данные 
+Выведите сумму введенных чисел.
+Sample Input:
+3
+1
+4
+5
+Sample Output:
+10
+
+РЕШЕНИЕ:
+using System;
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        int a = Convert.ToInt32(Console.ReadLine());       
+        int sum = 0;
+        for (int i = 1; i <= a; i++) {
+        int num = Convert.ToInt32(Console.ReadLine());
+            sum += num;
+        };
+       Console.Write(sum);
+    }
+}
+
+
+8. Сумма с условием
+ЗАДАЧА:
+Найдите сумму введенных чисел, которые кратны 2 , но не кратны 3 . 
+
+Входные данные 
+Вводится натуральное число N(N≤10 в стпени 5), а затем N чисел, каждое из которых по модулю не превышает 2∗10 в стпени 4.
+Выходные данные 
+Вычислите сумму введенных чисел, кратных 2 , но не кратных 3 .
+Sample Input:
+3
+2
+3
+4
+Sample Output:
+6
+
+РЕШЕНИЕ:
+using System;
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here     
+        int a = Convert.ToInt32(Console.ReadLine());  
+        int sum = 0;       
+        for (int i = 1; i <= a; i++) {
+        int num = Convert.ToInt32(Console.ReadLine());
+        if (num % 2 == 0 && num % 3 != 0) {        
+        sum += num;
+        };
+        };
+       Console.Write(sum);
+    }
+}
+
+
+9. Количество чисел
+ЗАДАЧА:
+По данным числам, определите количество чисел, оканчивающиеся на 0.
+Входные данные 
+Вводится натуральное число N(N≤10 в степени 5), а затем N чисел, каждое из которых не превышает 2⋅10 в степени 4.
+Выходные данные 
+Вычислите количество чисел, которые оканчиваются на 0 .
+Sample Input 1:
+3
+10
+25
+40
+Sample Output 1:
+2
+Sample Input 2:
+2
+15
+37
+Sample Output 2:
+0
+
+РЕШЕНИЕ:
+using System;
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        int a = Convert.ToInt32(Console.ReadLine());  
+        int count = 0;       
+        for (int i = 1; i <= a; i++) {
+        int num = Convert.ToInt32(Console.ReadLine());
+        if (num % 10 == 0) {        
+        count++;
+        };
+        };
+       Console.Write(count);
+    }
+}
+
+
+10. Нули
+ЗАДАЧА:
+По данным числам, определите наличие нуля среди них.
+
+Входные данные
+Вводится натуральное число N(N≤10 в степени 5), а затем N чисел, каждое из которых не превышает 2⋅10 в степени 4.
+Выходные данные
+Выведите "NO", если среди введенных чисел нет ни одного из них равного нулю, или "YES" в противном случае.
+Sample Input:
+3
+4
+10
+14
+Sample Output:
+NO
+
+РЕШЕНИЕ:
+using System;
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        int a = Convert.ToInt32(Console.ReadLine());   
+        int count = 0;
+        for (int i = 1; i <= a; i++) {
+        int num = Convert.ToInt32(Console.ReadLine());
+        if (num == 0) {        
+        count++;
+        }       
+        };
+        if (count > 0) {
+        Console.Write("YES");
+        } else {
+        Console.Write("NO");
+        };
+    }
+}
+
+
+11. Факториал
+ЗАДАЧА:
+По данному натуральному числу, найдите его факториал.
+
+Входные данные 
+Вводится единственное натуральное число N, которое не превосходит 12 .
+Выходные данные
+Вычислите N! - произведение всех натуральных чисел от 1 до N, то есть N!=1⋅2⋅3⋅…⋅N
+Sample Input:
+3
+Sample Output:
+6
+
+РЕШЕНИЕ:
+using System;
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        int a = Convert.ToInt32(Console.ReadLine());
+        int fact = 1;
+        for (int i = 1; i <= a; i++) {
+        fact *= i;
+        };
+        Console.Write(fact);
+    }
+}
+
+
+12. Произведение на отрезке
+ЗАДАЧА:
+По данным двум целым числа a и b, вычислите произведение чисел на отрезке от a до b.
+
+Формат входных данных
+На вход дается два целых числа a и b (a≤b), каждое из которых по модулю не превышает 100 .
+Формат выходных данных
+Программа должна вычислить произведение чисел  отрезке от a до b.
+Sample Input:
+3
+5
+Sample Output:
+60
+
+РЕШЕНИЕ:
+using System;
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        int a = Convert.ToInt32(Console.ReadLine());
+        int b = Convert.ToInt32(Console.ReadLine());
+        int fact = 1;
+        for (int i = a; i <= b; i++) {
+        fact *= i;
+        };
+        Console.Write(fact);
+    }
+}
+
+
+13. Произведение чисел, оканчивающиеся на 7
+ЗАДАЧА:
+По данным двум целым числа a и b, вычислите произведение чисел на отрезке от a до b, оканчивающихся на 7 .
+
+Формат входных данных
+На вход дается два целых числа a и b, каждое из которых по модулю не превышает 150 .
+Формат выходных данных
+Выведите произведение чисел  отрезке от a до b, оканчивающихся на 7 .
+
+Примечание: гарантируется, что в отрезке существует хотя бы одно число, оканчивающееся на 7. Ответ укладывается в тип данных int.
+Sample Input:
+1
+10
+Sample Output:
+7
+
+РЕШЕНИЕ:
+using System;
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        int a = Convert.ToInt32(Console.ReadLine());
+        int b = Convert.ToInt32(Console.ReadLine());
+        int fact = 1;
+        for (int i = a; i <= b; i++) {
+            if (i % 10 == 7){
+        fact *= i;
+            }
+        };
+        Console.Write(fact);
+    }
+}
+
+
+14. Произведение четных чисел
+ЗАДАЧА:
+По данному числу n, найдите произведение четных чисел от 1 до n. 
+Входные данные 
+Вводится единственное число n(2≤n≤100).
+Выходные данные
+Вычислите произведение четных чисел от 1 до n.
+Примечание: если будет одно четное число, то вывести его.
+Sample Input:
+10
+Sample Output:
+3840
+
+РЕШЕНИЕ:
+using System;
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+         int a = Convert.ToInt32(Console.ReadLine());       
+        int fact = 1;
+        for (int i = 1; i <= a; i++) {
+            if (i % 2 == 0) {
+            fact *= i;
+            };        
+        };
+        Console.Write(fact);
+    }
+}
+
+
+15. Сколько раз делится
+ЗАДАЧА:
