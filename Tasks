@@ -613,7 +613,7 @@ public class MainClass
 
 19. Количество четверок
 ЗАДАЧА:
-ано натуральное число N. Найдите количество четверок среди всех цифр числа N.
+Дано натуральное число N. Найдите количество четверок среди всех цифр числа N.
 
 Входные данные
 Вводится натуральное число N, не превышающее 109.
@@ -649,4 +649,44 @@ public class MainClass
 }
 
 
-20. 
+20. Замечательное число
+ЗАДАЧА:
+Дано натуральное число N. Определите является ли данное число замечательным.
+Число называется замечательным, если оно делится на сумму своих цифр без остатка.
+
+Входные данные
+Вводится натуральное число N, не превышающее 10 в степени 9.
+Выходные данные
+Выведите "YES", если число N замечательное, в противном случае "NO".
+Sample Input:
+1
+Sample Output:
+YES
+
+РЕШЕНИЕ:
+using System;
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        int a = Convert.ToInt32(Console.ReadLine());
+        int b = a;
+        int sum = 0;
+        while (a > 0) {
+        int digit = a % 10;
+            sum += digit;
+            a /= 10;
+        };
+        // Console.WriteLine(sum);
+        // Console.WriteLine(b);
+        if (b % sum == 0) {
+        Console.WriteLine("YES");
+        } else {
+        Console.WriteLine("NO");
+        };
+    }
+}
+
+
+21.
