@@ -759,4 +759,38 @@ public class MainClass
 }
 
 
-23.
+23. Перевод в двоичную систему счисления
+ЗАДАЧА:
+Дано натуральное число N. Переведите в двоичную систему счисления.
+
+Входные данные
+Вводится натуральное число N, не превышающее 10 в степени 9.
+Выходные данные
+Выведите двоичное представление числа N.
+Sample Input 1:
+4
+Sample Output 1:
+100
+Sample Input 2:
+2
+Sample Output 2:
+10
+
+РЕШЕНИЕ:
+using System;
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        int n = Convert.ToInt32(Console.ReadLine());
+        string num = "";
+        while (n > 0){
+    int a = n % 2;  
+    n = n / 2;
+    // Console.WriteLine(a);  
+    num = ("" + a) + num; 
+}
+    Console.Write(num);  
+    }
+}
