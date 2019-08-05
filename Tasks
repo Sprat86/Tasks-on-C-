@@ -689,4 +689,38 @@ public class MainClass
 }
 
 
-21.
+21. Обратное число
+ЗАДАЧА:
+Дано натуральное число N. Переставьте цифры числа в обратном порядке.
+
+Входные данные
+Вводится натуральное число N, не превышающее 10 в степени 9.
+Выходные данные
+Выведите число, полученное с помощью перестановки цифр числа N в обратном порядке.
+Sample Input 1:
+125
+Sample Output 1:
+521
+Sample Input 2:
+600
+Sample Output 2:
+006
+
+РЕШЕНИЕ:
+using System;
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        int a = Convert.ToInt32(Console.ReadLine());
+        int b = a;
+        string sum = "";
+        while (a > 0) {
+        int digit = a % 10;
+            sum += ("" + digit);
+            a /= 10;
+        };
+        Console.WriteLine(sum);
+     }
+}
