@@ -899,3 +899,47 @@ public class MainClass
         Console.WriteLine(count);
     }
 }
+
+
+26. Среднее значение последовательности
+ЗАДАЧА:
+Определите среднее арифметическое элементов последовательности, завершающейся числом 0. Число 0 в последовательность не входит.
+Числа, следующие за нулем, считывать не нужно.
+
+Входные данные
+Вводится последовательность целых чисел. Ввод завершается, когда будет введено число 0. Числа по модулю не превышают 1000.
+
+Выходные данные
+Выведите одно число - среднее арифметическое элементов последовательности
+Sample Input:
+1
+2
+3
+0
+6
+Sample Output:
+2
+
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        int a = Convert.ToInt32(Console.ReadLine());
+        double num = 0;
+        int count = 0;
+        while (a != 0) {
+        num += a;
+        count++;
+            a = Convert.ToInt32(Console.ReadLine());
+        }
+        num = num / count;
+        Console.WriteLine(num);
+    }
+}
+
+
+27. 
