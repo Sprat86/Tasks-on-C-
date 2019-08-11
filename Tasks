@@ -1025,3 +1025,58 @@ public class MainClass
         Console.WriteLine(count);
     }
 }
+
+
+29. Делители на отрезке
+ЗАДАЧА:
+На отрезке натуральных чисел от a до b (включая оба конца), найдите те числа, количество делителей у которых не меньше k. 
+
+Входные данные
+На вход подаются 3 числа: a,b,k. При этом 1≤a≤b≤10 в степени 6,1≤k≤10 в степени 4.
+Выходные данные
+Выведите  те числа на отрезке от a до b (включая оба конца), у которых количество делителей не меньше k.
+Sample Input 1:
+2
+5
+3
+Sample Output 1:
+4
+Sample Input 2:
+1
+10
+3
+Sample Output 2:
+4 6 8 9 10
+
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        int a = Convert.ToInt32(Console.ReadLine());
+        int b = Convert.ToInt32(Console.ReadLine());
+        int k = Convert.ToInt32(Console.ReadLine());       
+        for (int i = a; i <= b; i++) {
+              // Console.WriteLine(i);
+              int count = 0;
+         for (int j = 1; j <= i; j++) { 
+              //Console.WriteLine(i + " ");           
+         if (i % j == 0) {                
+               //Console.WriteLine(i + " ");  
+                count++;
+                // Console.WriteLine(i+ " : "+ count);
+          if (count == k) {
+                Console.Write(i + " ");               
+                }
+            }                        
+                } 
+        };
+      
+    }
+}
+
+
+30.
