@@ -1132,7 +1132,7 @@ Sample Output:
 19 10
 
 РЕШЕНИЕ:
-      using System;
+using System;
 
 public class MainClass
 {
@@ -1165,3 +1165,43 @@ public class MainClass
     }
 }
 
+
+32. Разложение на простые множители
+ЗАДАЧА:
+Вывести представление целого числа N в виде произведения простых чисел.
+
+Входные данные
+В первой строке находится единственное натуральное число N, где 2≤N≤2147483647.
+Выходные данные
+Выведите список чисел в порядке не убывания через пробел.
+Примечание: 1 - НЕ простое число
+
+Sample Input:
+6
+Sample Output:
+2 3
+
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        int num = Convert.ToInt32(Console.ReadLine());
+        int a = num;
+        int digit = 2;
+        while (digit <= num / 2) {
+            if (a % digit == 0) {
+                Console.Write(digit + " ");
+                a /= digit;
+            } else {
+                digit++;
+            }
+        }
+        if (a == num) {
+            Console.Write(num);
+        }
+    }
+}
