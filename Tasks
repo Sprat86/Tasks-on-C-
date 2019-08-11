@@ -1079,4 +1079,40 @@ public class MainClass
 }
 
 
-30.
+30. Количество цифр 7
+ЗАДАЧА:
+Посчитать, сколько раз встречается цифра 7 в последовательности чисел от 1 до N.
+
+Входные данные
+В первой строке находится единственное натуральное число N, не превышающее 10 в встепени 9.
+Выходные данные
+Выведите  сколько раз встречается цифра 7 в последовательности чисел от 1 до N.
+Sample Input:
+20
+Sample Output:
+2
+
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+int num = Convert.ToInt32(Console.ReadLine());
+        int count = 0;
+        for (int i = 1; i <= num; i++) {
+            int j = i;
+            while (j != 0){
+              if (j % 10 == 7){ 
+              count++;
+                 } 
+               j /= 10;
+                   
+            }
+        }
+        Console.WriteLine(count);
+    }
+}
+
