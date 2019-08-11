@@ -1116,3 +1116,52 @@ int num = Convert.ToInt32(Console.ReadLine());
     }
 }
 
+
+31. Максимальная сумма цифр.
+ЗАДАЧА:
+Среди натуральных чисел от 1 до N(включая N), найдите число наибольшее по сумме цифр. Вывести это число и сумму его цифр.
+
+Входные данные
+В первой строке находится единственное натуральное число N, не превышающее 10 в степени 6.
+Выходные данные
+Выведите  само число, которое имеет максимальную сумму цифр и саму сумму цифр на одной строке через пробел.
+Если таких чисел несколько, выведите минимальное из них.
+Sample Input:
+20
+Sample Output:
+19 10
+
+РЕШЕНИЕ:
+      using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        int num = Convert.ToInt32(Console.ReadLine());
+       int sumMax = 0; // Обязательно объявлять здесь, иначе будут все результаты сравнения в if (sum > sumMax)
+        int numMax = 0; // Обязательно объявлять здесь, иначе не видна будет внешне;
+        for (int i = 0; i <= num; i++){
+            int j = i;
+             //Console.WriteLine(j); 
+            int sum = 0; // переменную обязательно объявлять в этом цикле, а не за первым циклом.
+            string str = "";           
+               while (j > 0){                     
+                   int digit = j % 10;
+                   sum += digit;  
+                   str = ("" + digit) + str;
+                   j /= 10;
+               }
+        //Console.WriteLine(sum);
+            if (sum > sumMax) {               
+                sumMax = sum;   
+                numMax = i;
+            }  
+            // Console.WriteLine(str);
+            //Console.WriteLine(numMax);
+        }
+        Console.WriteLine(numMax + " " + sumMax);
+    }
+}
+
