@@ -1320,4 +1320,44 @@ public class MainClass
 }
 
 
-36. 
+36. Номер строки
+ЗАДАЧА:
+По данной последовательности строк, определите какой по счету встретится строка s.
+
+Входные данные
+Вводится строка s, а далее последовательность строк. Каждая строка по длине не превышает 30 символов.
+Выходные данные
+Определите каким по счету встретится строка s в данной последовательности и выведите этот номер.
+
+Примечание: гарантируется, что данная строка встретится в последовательности.
+Sample Input:
+Abc
+asd
+asd
+eqw
+qdas
+ABc
+Cde
+Abc
+awr
+Sample Output:
+7
+
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        string str = Console.ReadLine();
+        string a = Console.ReadLine();
+        int count = 1;
+        while (a != str) {  
+           count++;  
+           a = Console.ReadLine();           
+        } 
+        Console.Write(count);
+    }
+}
