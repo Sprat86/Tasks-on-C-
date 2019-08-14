@@ -1361,3 +1361,46 @@ public class MainClass
         Console.Write(count);
     }
 }
+
+
+37. Кубическое уравнение
+ЗАДАЧА:
+По данным числа a,b,c и d найдите  все целые решения уравнения ax в степени 3+bx в степени2+cx+d=0 на отрезке [0,1000]
+и выведите их в порядке возрастания.
+
+Входные данные
+Вводятся 4 целых числа: a,b,c и d, каждое из которых не превосходит 30000.
+Выходные данные
+Выведите на одной строке через пробел все целые решения уравнения на отрезке [0,1000] и выведите их в порядке возрастания. 
+Если на данном отрезке нет ни одного решения, то ничего выводить не нужно.
+Sample Input:
+0
+0
+7
+-28
+Sample Output:
+4
+
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+         int a = Convert.ToInt32(Console.ReadLine());
+         int b = Convert.ToInt32(Console.ReadLine());
+         int c = Convert.ToInt32(Console.ReadLine());
+         int d = Convert.ToInt32(Console.ReadLine());
+        for (int x = 0; x <= 1000; x++) {
+        if (a*x*x*x + b*x*x + c*x + d == 0) {
+        Console.Write(x + " ");
+        } else {
+        Console.Write("");
+        }
+        }
+    }
+}
+
+
