@@ -1565,3 +1565,47 @@ public class MainClass
         Console.WriteLine(numberMax);
     }
 }
+
+
+42. Разница между экстремумами
+ЗАДАЧА:
+Найдите разницу между максимальным и минимальным числами.
+Входные данные
+Вводится натуральное число N(N≤10 в степени 5), а затем N чисел, каждое из которых по модулю не превышает 10 в степени 6.
+Выходные данные
+Выведите разницу между максимальным и минимальным числами.
+Sample Input:
+4
+1
+10
+5
+2
+Sample Output:
+9
+
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        int n = Convert.ToInt32(Console.ReadLine());
+        int numMax = 1000000;
+        int numMin = -1000000;
+        int number;
+        for (int i = 1; i <= n; i++) {
+        number  = Convert.ToInt32(Console.ReadLine());
+            if (number <= numMax) {
+            numMax = number;
+            };
+            if (number >= numMin) {
+            numMin = number;
+            }
+        }
+        //Console.Write(numMax - numMin);
+        //Console.WriteLine(numMax);
+        Console.WriteLine(numMin - numMax);
+    }
+}
