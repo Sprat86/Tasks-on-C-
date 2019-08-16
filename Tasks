@@ -1676,3 +1676,51 @@ public class MainClass
     }
 }
 
+
+44. Второй максимум 
+Последовательность состоит из различных натуральных чисел и завершается числом 0.
+Определите значение второго по величине элемента в этой последовательности. Числа, следующие за числом 0, считывать не нужно.
+
+Входные данные
+Вводится последовательность натуральных чисел, оканчивающаяся числом 0 (само число 0 в последовательность не входит).
+Числа не превышают 1000.
+
+Выходные данные
+Выведите значение второго по величине элемента.
+Sample Input:
+1
+2
+3
+4
+5
+0
+Sample Output:
+4
+
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        int num = Convert.ToInt32(Console.ReadLine());
+        int max = 0;
+        int lowMax = 0;   
+        
+        while (num != 0) { 
+        if (num >= max){
+        lowMax = max;
+        max = num;
+        }
+        if (lowMax < num && num < max) {
+        lowMax = num;
+        }            
+        num = Convert.ToInt32(Console.ReadLine()); 
+            //Console.WriteLine(max);
+        } 
+            //Console.WriteLine(max);
+        Console.WriteLine(lowMax);
+        }
+    }
