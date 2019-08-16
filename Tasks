@@ -1609,3 +1609,70 @@ public class MainClass
         Console.WriteLine(numMin - numMax);
     }
 }
+
+
+43. Камера наблюдения
+ЗАДАЧА:
+Камера наблюдения регистрирует в автоматическом режиме скорость проезжающих мимо неё автомобилей.
+Необходимо определить максимальную зарегистрированную скорость автомобиля.
+Если скорость хотя бы одного автомобиля была меньше 30 км/ч, выведите «YES», иначе выведите «NO».
+
+Входные данные
+Программа получает на вход число проехавших автомобилей N(1<N<30), затем указываются их скорости.
+Значение скорости не может быть меньше 1 и больше 300.
+
+Выходные данные
+Выведите максимальную зарегистрированную скорость автомобиля.
+А затем, если скорость хотя бы одного автомобиля была меньше 30 км/ч, выведите «YES» в той же строке, иначе выведите «NO».
+
+Sample Input 1:
+4
+100
+80
+50
+80
+Sample Output 1:
+100 NO
+Sample Input 2:
+4
+100
+80
+50
+25
+Sample Output 2:
+100 YES
+
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        int n = Convert.ToInt32(Console.ReadLine()); 
+        int speed = Convert.ToInt32(Console.ReadLine()); 
+        int maxSpeed = speed; 
+        int minSpeed = speed; 
+        for (int i = 0; i < n; i++)
+        {
+            if (speed > maxSpeed)
+            {
+                maxSpeed = speed; 
+            }
+            if (speed < minSpeed) 
+            {
+                minSpeed = speed; 
+            }
+            speed = Convert.ToInt32(Console.ReadLine()); 
+        }
+       // Console.WriteLine(maxSpeed);
+       // Console.WriteLine(minSpeed);
+        if (minSpeed < 30) {
+        Console.WriteLine(maxSpeed + " YES");
+        } else {
+        Console.WriteLine(maxSpeed + " NO");
+        }        
+    }
+}
+
