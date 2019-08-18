@@ -1897,3 +1897,60 @@ public class MainClass
         Console.WriteLine(sum);
     }
 }
+
+
+49. Цифровой корень
+ЗАДАЧА:
+ифровой корень натурального числа — это цифра, полученная в результате итеративного процесса суммирования цифр,
+на каждой итерации которого для подсчета суммы цифр берут результат, полученный на предыдущей итерации.
+Этот процесс повторяется до тех пор, пока не будет получена одна цифра.
+
+Например цифровой корень 65536 это 7 , потому что 6+5+5+3+6=25 и 2+5=7 . 
+По данному числу определите его цифровой корень.
+Входные данные
+Вводится одно натуральное число n, не превышающее 10 в степени 7.
+Выходные данные
+Вывести цифровой корень числа n.
+Sample Input 1:
+10
+Sample Output 1:
+1
+Sample Input 2:
+65536
+Sample Output 2:
+7
+
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        int num = Convert.ToInt32(Console.ReadLine());
+         int sum = 0;
+         int sumNext = 0;
+         int sumLast = 0;  
+        
+            while (num != 0) {
+                sum += num % 10;
+                num /= 10;
+            }         
+        
+        //Console.WriteLine(sum);
+            while (sum != 0)
+            {
+               sumNext += sum % 10;
+                sum /= 10;
+            }
+         //Console.WriteLine(sumNext);
+        
+        while (sumNext != 0)
+            {
+               sumLast += sumNext % 10;
+                sumNext /= 10;
+            }
+         Console.WriteLine(sumLast);
+    }
+}
