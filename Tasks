@@ -2000,3 +2000,53 @@ public class MainClass
         Console.WriteLine(count);
     }
 }
+
+
+51. Самое большое число, кратное 7
+ЗАДАЧА:
+Найдите самое большее число на отрезке от a до b, кратное 7.
+Входные данные 
+Вводится целых числа a и b(a≤b) , каждое из которых по модулю не превышает 2∗10 в степени 4.
+Выходные данные 
+Найдите самое большее число на отрезке от a до b, кратное 7 , или выведите "NO" - если таковых нет.
+Sample Input 1:
+1
+100
+Sample Output 1:
+98
+Sample Input 2:
+1
+6
+Sample Output 2:
+NO
+
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        int a = Convert.ToInt32(Console.ReadLine());
+        int b = Convert.ToInt32(Console.ReadLine());
+        int count = 0;       
+        for (int i = b; i >= a; i--) {
+            
+              if (i % 7 == 0) {                    
+          Console.WriteLine(i);
+                 break; 
+                } 
+            
+            if (Math.Abs(b - a) < 7) {              
+                if (i % 7 == 0) {
+                Console.WriteLine(i);  
+                    break;
+                }
+                if (i == a) {                
+                Console.WriteLine("NO");
+                }               
+            }            
+        }        
+    }
+}
