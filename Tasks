@@ -1724,3 +1724,48 @@ public class MainClass
         Console.WriteLine(lowMax);
         }
     }
+
+
+45. Палиндром?
+ЗАДАЧА:
+По данному числу определите, является ли оно палиндромом?
+Входные данные
+Вводится одно натуральное число n, не превышающее 10 в степени 9.
+Выходные данные
+Вывести "YES", если число является палиндромом , в противном случае - "NO".
+
+Примечание: гарантируется, что число не оканчивается на ноль.
+
+Sample Input 1:
+25
+Sample Output 1:
+NO
+Sample Input 2:
+545
+Sample Output 2:
+YES
+
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+int n = Convert.ToInt32(Console.ReadLine());
+        string str = "";     
+        int num = n;
+        while (num > 0){
+            str += (num % 10);
+            num /= 10;
+        }
+        
+        num = Convert.ToInt32(str);
+        if (n == num) {
+            Console.WriteLine("YES");
+        } else {
+            Console.WriteLine("NO");
+        }         
+    }
+}
