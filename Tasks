@@ -1769,3 +1769,50 @@ int n = Convert.ToInt32(Console.ReadLine());
         }         
     }
 }
+
+
+46. 5 и 7
+ЗАДАЧА:
+Из данного числа выбросите цифры 5 и 7 , при этом порядок остальных цифр при этом не меняется.
+Входные данные
+Вводится одно натуральное число n, не превышающее 10000.
+Выходные данные
+Вывести число n, без цифр 5 и 7 .
+
+Примечание: гарантируется, что число содержит хотя бы 1 символ, отличный от 5 и 7 .
+
+Sample Input:
+27
+Sample Output:
+2
+
+РЕШЕНИЕ:
+using System;
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        int n = Convert.ToInt32(Console.ReadLine());
+        int num = 0;
+        while (n != 0) {
+        int digit = n % 10;
+           // Console.WriteLine(digit);
+        if (digit == 5 || digit == 7) {
+             num = num;
+            } else {
+          num = num * 10 + digit; 
+        }
+            n /= 10;            
+}
+     //  Console.WriteLine(num);
+        
+        int numLast = 0;
+        while (num != 0) {
+        int digitLast = num % 10;
+     numLast = numLast * 10 + digitLast; 
+          num /= 10;            
+}
+    Console.WriteLine(numLast);
+        }}
+       
