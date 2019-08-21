@@ -2054,5 +2054,39 @@ public class MainClass
 
 ЗАДАЧИ НА СТРОКИ И СИМВОЛЫ:
 
+1. Цифра
+ЗАДАЧА:
+Определите является ли данный символ цифрой или нет.
+Входные данные
+Задан единственный символ c.
+Выходные данные
+Необходимо вывести "YES", если символ является цифрой, и "NO" - в противном случае.
+Sample Input 1:
+5
+Sample Output 1:
+YES
+Sample Input 2:
+S
+Sample Output 2:
+NO
+
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        char c = Convert.ToChar(Console.ReadLine());
+        if (c >= '0' && c <= '9') 
+{
+   Console.WriteLine("YES");
+} else {
+   Console.WriteLine("NO");
+}       
+    }
+}
+
 
 
