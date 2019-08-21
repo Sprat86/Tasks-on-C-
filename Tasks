@@ -2151,3 +2151,39 @@ public class MainClass
 }
 
 
+4. Изменить регистр символа 
+Измените регистр символа, если он был латинской буквой: сделайте его заглавным, если он был строчной буквой и наоборот.
+Входные данные
+Задан единственный символ латинского алфавита c. 
+Выходные данные
+Необходимо вывести получившийся символ.
+Sample Input 1:
+a
+Sample Output 1:
+A
+Sample Input 2:
+Q
+Sample Output 2:
+q
+
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+       int code;
+       char c = Convert.ToChar(Console.ReadLine());
+       if (c >= 'a' && c <= 'z') {
+            code =  (int)c - 32;
+       Console.WriteLine((char)code);
+       } else if (c >= 'A' && c <= 'Z') {
+           code =  (int)c + 32;
+       Console.WriteLine((char)code);
+       } 
+    }
+}
+
+
