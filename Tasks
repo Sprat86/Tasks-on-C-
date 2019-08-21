@@ -2089,4 +2089,36 @@ public class MainClass
 }
 
 
+2. Часть алфавита
+ЗАДАЧА:
+По заданной строчной букве латинского алфавита, выведите все строчные буквы латинского алфавита, начиная от начала до заданной буквы.
+Входные данные
+Задан единственный символ c - строчная буква латинского алфавита.
+Выходные данные
+Выведите алфавит латинского алфавита, начиная от начала и заканчивая символом c на одной строке через пробел.
+Sample Input 1:
+c
+Sample Output 1:
+a b c
+Sample Input 2:
+a
+Sample Output 2:
+a
+
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        char c = Convert.ToChar(Console.ReadLine());
+        for (char i = 'a'; i <= c; i++) {
+        Console.Write(i + " ");
+        }
+    }
+}
+
+
 
