@@ -2222,4 +2222,35 @@ public class MainClass
 }
 
 
-6.
+6. Перевертыш
+ЗАДАЧА:
+Дана строка. Найдите перевернутую ей строку.
+
+Входные данные
+На вход подается строка, длина которой не превосходит 1000.
+Выходные данные
+Необходимо вывести ее перевертыш.
+Sample Input:
+abac
+Sample Output:
+caba
+
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        string str = Console.ReadLine();
+        string strResult = "";
+        for (int i = 0; i < str.Length; i++) {
+        strResult = str[i] + strResult;
+        }
+        Console.WriteLine(strResult);
+    }
+}
+
+
+7.
