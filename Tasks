@@ -2253,4 +2253,36 @@ public class MainClass
 }
 
 
-7.
+7. k -ый символ
+ЗАДАЧА:
+Дана строка. Удалите k-ый символ в ней.
+
+Входные данные
+На первой строке вводится строка s. На второй строке вводится целое число 1≤k≤|s|, где |s| длина строки s.
+
+Выходные данные
+Необходимо вывести строку s без k-го символа.
+Sample Input:
+Пылесос!
+8
+Sample Output:
+Пылесос
+
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        string str = Console.ReadLine();
+        int k = Convert.ToInt32(Console.ReadLine());
+        k = k-1;
+        str = str.Remove(k, 1);
+        Console.WriteLine(str);
+    }
+}
+
+
+8.
