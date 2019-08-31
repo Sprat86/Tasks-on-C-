@@ -2455,4 +2455,34 @@ public class MainClass
 }
 
 
-12.
+12. Нормируй строку!
+ЗАДАЧА:
+Вводится ненормированная строка, у которой могут быть пробелы в начале, в конце и между словами более одного пробела. Привести ее к нормированному виду, т.е. удалить все пробелы в начале и конце, а между словами оставить только один пробел.
+
+Входные данные
+На вход подается одна строка.
+Выходные данные
+Необходимо вывести строку в нормированном виде.
+Sample Input:
+ Bee    Geek   !
+Sample Output:
+Bee Geek !
+
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        string str = Console.ReadLine();
+        while (str.Contains("  ")) { 
+            str = str.Replace("  ", " "); 
+        }
+        Console.WriteLine(str);
+    }
+}
+
+
+13.
