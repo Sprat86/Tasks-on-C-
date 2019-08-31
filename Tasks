@@ -2404,4 +2404,55 @@ public class MainClass
 }
 
 
-11.
+11. Идентификатор
+ЗАДАЧА:
+Определить, является ли введенное слово идентификатором, т.е. начинается ли оно с английской буквы в любом регистре или
+знака подчеркивания и не содержит других символов, кроме букв английского алфавита (в любом регистре), цифр и знака подчеркивания.
+   
+Входные данные
+На вход программе подается одна строка.
+Выходные данные
+Если строка является идентификатором, необходимо вывести "YES", иначе - "NO".
+Sample Input 1:
+BeeGeek
+Sample Output 1:
+YES
+Sample Input 2:
+1024BeeGeek
+Sample Output 2:
+NO
+
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        string str = Console.ReadLine();
+        int count = 0;
+        if ((str[0] >= 'a' && str[0] <= 'z') || (str[0] >= 'A' && str[0] <= 'Z') || (str[0] == '_')) {
+            count++; 
+        for (int i = 1; i < str.Length; i++) {           
+        if ((str[i] >= 'a' && str[i] <= 'z') ||
+            (str[i] >= 'A' && str[i] <= 'Z') ||
+            (str[i] >= '0') && (str[i] <= '9') || 
+            (str[i] == '_')) {
+            count++;        
+        }        
+        } 
+        if (count == str.Length) {
+        Console.WriteLine("YES");           
+        } else {
+        Console.WriteLine("NO"); 
+        }    
+            
+        } else {
+         Console.WriteLine("NO"); 
+        }
+    }
+}
+
+
+12.
