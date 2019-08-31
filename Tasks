@@ -2368,4 +2368,40 @@ public class MainClass
 }
 
 
-10.
+10. Две одинаковые буквы
+ЗАДАЧА:
+Дана строка. Известно, что она содержит ровно две одинаковые буквы. Найдите эти буквы.
+Гарантируется, что повторяются буквы только одного вида.
+
+Входные данные
+На вход подается одна строка.
+Выходные данные
+Необходимо вывести букву, которая встречается в строке дважды.
+Sample Input:
+abac
+Sample Output:
+a
+
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        string str = Console.ReadLine();
+        int i, j;        
+        for(i = 0; i < str.Length; i++) {
+            for(j = i; j < str.Length-1; j++) {
+                if( str[i] == str[j+1]) {
+                    Console.WriteLine(str[i]);          
+                     //break;
+                  }       
+              }
+         }        
+    }
+}
+
+
+11.
