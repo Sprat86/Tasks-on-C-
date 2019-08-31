@@ -2331,4 +2331,41 @@ public class MainClass
 }
 
 
-9.
+9. Палиндром?
+ЗАДАЧА:
+По данной строке определите, является ли она палиндромом? То есть, которое одинаково читается слева направо и справа налево.
+Например, слово "шалаш".
+
+Входные данные
+На вход подается одна строка без пробелов.
+Выходные данные
+Необходимо вывести  "YES", если строка является палиндромом, и "NO" - в противном случае.
+Sample Input:
+abcba
+Sample Output:
+YES
+
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        string str = Console.ReadLine();
+        string result = "";
+        for (int i = 0; i < str.Length; i++) {
+        result = str[i] + result;
+        }
+        // Console.WriteLine(result);
+        if (str == result) {
+        Console.WriteLine("YES");
+        } else {
+        Console.WriteLine("NO");
+        }
+    }
+}
+
+
+10.
