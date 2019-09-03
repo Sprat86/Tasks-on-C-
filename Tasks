@@ -2525,4 +2525,53 @@ public class MainClass
 }
 
 
-14. 
+14. Часть алфавита
+ЗАДАЧА:
+Даны две строчные буквы латинского алфавита. Выведите все строчные буквы латинского алфавита в алфавитном порядке,
+которые находятся между данными символами.
+
+Входные данные
+Вводятся две строчные буквы латинского алфавита.
+Выходные данные
+Выведите на одной строке через пробел все строчные буквы латинского алфавита в алфавитном порядке,
+которые находятся между данными символами.
+Примечание: первая буква не обязательно меньше, чем вторая буква.
+Sample Input:
+a
+d
+Sample Output:
+a b c d
+
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {      
+        char a = Convert.ToChar(Console.ReadLine());
+        char b = Convert.ToChar(Console.ReadLine());
+        if (a < b)
+        {
+        for (char c = a; c < b; c++)
+        {
+            Console.Write(c + " ");
+        }
+            Console.Write(b);
+        }
+        if (a > b)
+        {
+        for (char c = b; c < a; c++)
+        {
+            Console.Write(c + " ");
+        }
+            Console.Write(a);
+        }
+        if (a == b) {
+        Console.Write(a);
+        }            
+    }
+}
+
+
+15. 
