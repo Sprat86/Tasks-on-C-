@@ -2485,4 +2485,44 @@ public class MainClass
 }
 
 
-13.
+13. K-ый символ
+ЗАДАЧА:
+По данной строке, найдите ее k-ый символ.
+
+Входные данные
+На вход программе дается непустая строка s, длиной не больше 1000.
+На следующей строке вводится натуральное число k, не превосходящее 1000.
+Выходные данные
+Выведите k-ый символ строки, если он существует, в противном случае выведите "NO".
+Sample Input 1:
+Hulahoop
+4
+Sample Output 1:
+a
+Sample Input 2:
+Hulahoop
+10
+Sample Output 2:
+NO
+
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        string str = Console.ReadLine();
+        int k = Convert.ToInt32(Console.ReadLine());
+        char empty = ' ';            
+        if (str.Length < k){
+        Console.WriteLine("NO");            
+        } else if (str[k-1] != empty){
+            Console.WriteLine(str[k-1]);
+        } 
+    }
+}
+
+
+14. 
