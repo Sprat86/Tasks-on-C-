@@ -2574,4 +2574,34 @@ public class MainClass
 }
 
 
-15. 
+15. Инициалы
+ЗАДАЧА:
+По данным ФИО сформируйте строку, содержащую фамилию с инициалами. Например, по ‘Ivanov Ivan Ivanovich’ получите "Ivanov I.I.".
+Входные данные
+На вход программе подаются 3 строки - фамилия имя отчество.
+Выходные данные
+Выведите строку, содержащую фамилию с инициалами.
+Sample Input:
+Ivanov
+Ivan
+Ivanovich
+Sample Output:
+Ivanov I.I.
+
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        string surname = Console.ReadLine();
+        string name = Console.ReadLine();
+        string middlename = Console.ReadLine();
+        Console.Write(surname + " " + name[0] + "." + middlename[0] + ".");        
+    }
+}
+
+
+16.
