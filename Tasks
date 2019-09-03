@@ -2604,4 +2604,42 @@ public class MainClass
 }
 
 
-16.
+16. Индексация в строке
+ЗАДАЧА:
+
+Даны два слова. Верно ли, что первое слово начинается на ту же букву, на которую заканчивается второе слово?
+Входные данные
+На вход программе подаются 2 строки. Длины данных строк не превосходят 1000.
+Выходные данные
+Выведите "YES", если первое слово начинается на ту же букву, на которую заканчивается второе слово, иначе выведите "NO".
+Sample Input 1:
+abaca
+jdsfa
+Sample Output 1:
+YES
+Sample Input 2:
+abc
+abc
+Sample Output 2:
+NO
+
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        string str1 = Console.ReadLine();
+        string str2 = Console.ReadLine();
+        if (str1[0] == str2[str2.Length-1]) {
+        Console.Write("YES");
+        } else {
+        Console.Write("NO");
+        }
+    }
+}
+
+
+17.
