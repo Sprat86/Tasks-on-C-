@@ -2706,5 +2706,40 @@ public class MainClass
 }
 
 
-19.
+19. Цифры в тексте
+ЗАДАЧА:
+Дан текст, составленный из букв латинского алфавита и цифр. Напечатать все имеющиеся в нем цифры.
+
+Входные данные
+На вход программе подается текст, составленный из букв латинского алфавита и цифр, длина которого не превосходит 1000.
+Выходные данные
+Выведите все имеющие цифры в тексте через пробел.
+Sample Input:
+Ronaldo7
+Sample Output:
+7
+
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+         string str = Console.ReadLine();
+        
+        if ( str[0] >= '0' && str[0] <= '9' ) {
+            Console.Write(str[0] + " "); 
+        }
+        for (int i = 1; i < str.Length; i++) {           
+        if ( str[i] >= '0' && str[i] <= '9' ) {
+            Console.Write(str[i] + " ");    
+            }  
+        }
+    }
+}
+
+
+20.
 
