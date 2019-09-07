@@ -2741,5 +2741,50 @@ public class MainClass
 }
 
 
-20.
+ЗАДАЧИ С МАССИВАМИ.
+
+1. Поиск-1
+ЗАДАЧА:
+Дан массив, состоящий из целых чисел. Напишите программу, которая выведет элементы массива, индексы которых кратны трем (0, 3, 6...).
+
+Входные данные
+Сначала задано число N — количество элементов в массиве (1≤N≤100). Далее через пробел записаны N чисел — элементы массива.
+Массив состоит из целых чисел, каждое из которых по модулю не превышает 10 в степени 5.
+Выходные данные
+Необходимо вывести все элементы массива с номерами, кратными трем.
+Sample Input:
+7
+1 3 2 4 5 0 8
+Sample Output:
+1 4 8
+
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        int n = Convert.ToInt32(Console.ReadLine());
+        string s = Console.ReadLine();
+        string[] ss = s.Split(' ');
+       // Console.Write(ss);
+        int[] numbers = new int[n];
+        for (int i = 0; i < n; i++){
+           int number = Convert.ToInt32(ss[i]);
+           numbers[i] = number;            
+         }
+        // Console.WriteLine(numbers);
+        for (int i = 0; i < n; i++) {
+            if (i % 3 == 0) {
+           Console.Write(numbers[i] + " ");
+            }
+        }        
+    }
+}
+
+
+2.
+
 
