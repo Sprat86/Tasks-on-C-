@@ -2872,5 +2872,59 @@ public class MainClass
 }
 
 
-4. 
+4. Переставить соседние элементы
+ЗАДАЧА:
+Напишите программу, которая переставляет соседние элементы массива (1-й элемент поменять с 2-м, 3-й с 4-м и т.д.
+Если элементов нечетное число, то последний элемент остается на своем месте).
+
+Входные данные
+Сначала задано число N — количество элементов в массиве (1≤N≤35). Далее через пробел записаны N чисел — элементы массива.
+Массив состоит из целых чисел, каждое из которых по модулю не превышает 10 в степени 6.
+Выходные данные
+Необходимо вывести массив, полученный после перестановки элементов.
+Sample Input 1:
+5
+9 4 5 2 3
+Sample Output 1:
+4 9 2 5 3 
+Sample Input 2:
+4
+1 2 3 4
+Sample Output 2:
+2 1 4 3
+
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        int n = Convert.ToInt32(Console.ReadLine());
+        string str = Console.ReadLine();
+        string[] arr = str.Split(' ');
+        int[] numbers = new int[n];
+        // Console.Write(str);
+        numbers [n-1] = Convert.ToInt32(arr [n-1]);
+        
+        for (int i = 1; i < n; i+=2){            
+           int num2 = Convert.ToInt32(arr[i]);           
+           numbers[i-1] = num2;            
+        }
+        
+        for (int i = 0; i < n-1; i+=2){           
+           int num1 = Convert.ToInt32(arr[i]);
+           numbers[i+1] = num1;           
+        }
+               
+        for (int i = 0; i < n; i++){
+           Console.Write(numbers[i] + " ");           
+        }       
+    }
+}
+
+
+5. 
+
 
