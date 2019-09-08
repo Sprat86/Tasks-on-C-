@@ -2925,6 +2925,58 @@ public class MainClass
 }
 
 
-5. 
+5. Есть ли два элемента с одинаковыми знаками
+ЗАДАЧА:
+Дан массив, состоящий из целых чисел. Напишите программу, которая определяет, есть ли в массиве пара соседних элементов
+с одинаковыми знаками.
+Входные данные
+Сначала задано число N — количество элементов в массиве (1≤N≤10000). Далее через пробел записаны N чисел — элементы массива.
+Массив состоит из целых ненулевых чисел, каждое из которых не превышает 10000.
+Выходные данные
+Необходимо вывести "YES", если существует пара соседних элементов с одинаковыми знаками. В противном случае следует вывести "NO".
+Sample Input 1:
+5
+1 2 -3 4 -5
+Sample Output 1:
+YES
+Sample Input 2:
+5
+1 -2 3 -4 5
+Sample Output 2:
+NO
 
+РЕШЕНИЕ:
+using System;
+
+public class MainClass
+{
+    public static void Main()
+    {
+        // put your c# code here
+        int n = Convert.ToInt32(Console.ReadLine());
+        string str = Console.ReadLine();
+        string[] arr = str.Split(' ');
+        int[] numbers = new int[n];
+        int count = 0;
+        for (int i = 0; i < n; i++){
+           int num = Convert.ToInt32(arr[i]);
+           numbers[i] = num;
+        }
+        
+        for (int i = 0; i < n-1; i++){
+            if ( (numbers[i] > 0 && numbers[i+1] > 0) || (numbers[i] < 0 && numbers[i+1] < 0) ) {
+                count++;           
+            }
+        }
+        //Console.Write(count);
+        if (count > 0) { 
+        Console.WriteLine("YES");                   
+        } else {
+        Console.Write("NO"); 
+        }        
+    }
+}
+
+
+6. 
 
